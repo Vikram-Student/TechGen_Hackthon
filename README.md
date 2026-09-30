@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Campus Lost & Found — End Product
 
 A privacy-first campus lost & found application built with React + Vite + Supabase.
@@ -51,3 +52,31 @@ Do not add phone numbers, personal email addresses, passwords, or other private 
 
 ## Mandatory item photo
 Every new item report requires a PNG, JPG, or WEBP photo (maximum 5 MB). The frontend validates this and the Supabase database trigger rejects new/updated records without an image path. Existing records from earlier testing are not modified.
+=======
+# Campus Lost & Found
+90-minute MVP for a college building/hackathon session.
+
+## Run
+Open `index.html` in any modern browser. No server or installation required.
+
+## Features
+- Lost / Found report creation
+- Search and status filter
+- LocalStorage persistence
+- Item details
+- Mark item as Returned
+- Dashboard statistics
+- Responsive UI
+
+## Team split
+1. UI/navigation
+2. Report form
+3. Search/items
+4. Integration/testing/presentation
+
+## Privacy & Safety
+- Reporter phone numbers are not displayed in public item cards/details.
+- Users contact reporters through an in-app request form.
+- Claim requests store only the claimant's supplied contact and message in localStorage for the prototype.
+- Recommended real deployment: authenticated backend, encrypted storage, role-based access, moderation, rate limiting, and campus-admin controlled handover.
+>>>>>>> 3bb6ea9262e185e5848fbbb4c2146fdb82aca52e

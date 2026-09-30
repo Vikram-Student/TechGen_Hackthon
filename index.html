@@ -1,3 +1,91 @@
+<<<<<<< HEAD
 <!doctype html>
 <html><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Campus Lost & Found</title></head><body><div id="root"></div><script type="module" src="/src/main.jsx"></script></body></html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Lost & Found</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo">🔎</span><div><strong>Campus Lost & Found</strong><small>Find it. Report it. Return it.</small></div></div>
+    <nav>
+      <button class="nav-btn active" data-view="home">Dashboard</button>
+      <button class="nav-btn" data-view="report">Report Item</button>
+      <button class="nav-btn" data-view="items">Browse Items</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="home" class="view active">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">CAMPUS COMMUNITY</p>
+          <h1>Lost something?<br><span>Let's bring it back.</span></h1>
+          <p class="hero-text">Report lost or found belongings and help students reconnect with their items.</p>
+          <div class="hero-actions">
+            <button class="primary" data-go="report" data-status="Lost">🔴 Report Lost Item</button>
+            <button class="secondary" data-go="report" data-status="Found">🟢 Report Found Item</button>
+          </div>
+        </div>
+        <div class="hero-card"><div class="hero-icon">🎒</div><h3>One campus. One place.</h3><p>A simple central place for lost and found reports.</p></div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><span id="lostCount">0</span><small>Lost Items</small></div>
+        <div class="stat"><span id="foundCount">0</span><small>Found Items</small></div>
+        <div class="stat"><span id="returnedCount">0</span><small>Returned</small></div>
+        <div class="stat"><span id="totalCount">0</span><small>Total Reports</small></div>
+      </div>
+
+      <div class="section-head"><div><p class="eyebrow">LATEST</p><h2>Recent reports</h2></div><button class="text-btn" data-go="items">View all →</button></div>
+      <div id="recentItems" class="grid"></div>
+    </section>
+
+    <section id="report" class="view">
+      <div class="page-head"><p class="eyebrow">CREATE REPORT</p><h2>Report a lost or found item</h2><p>Give enough details so the right person can identify it.</p></div>
+      <form id="reportForm" class="form-card">
+        <div class="type-switch">
+          <button type="button" class="type-btn active" data-type="Lost">🔴 Lost Item</button>
+          <button type="button" class="type-btn" data-type="Found">🟢 Found Item</button>
+        </div>
+        <input type="hidden" id="status" value="Lost">
+        <div class="form-grid">
+          <label>Item name<input id="itemName" required placeholder="e.g. Black wallet"></label>
+          <label>Category<select id="category"><option>ID Card</option><option>Electronics</option><option>Books</option><option>Wallet / Money</option><option>Keys</option><option>Accessories</option><option>Other</option></select></label>
+          <label>Location<input id="location" required placeholder="e.g. Library, Block A"></label>
+          <label>Date<input id="date" type="date" required></label>
+          <label>Contact name<input id="contactName" required placeholder="Your name"></label>
+          <label>Contact phone<input id="phone" required placeholder="10-digit mobile number"></label>
+        </div>
+        <label>Description<textarea id="description" required placeholder="Color, brand, identifying marks, where it was last seen, etc."></textarea></label>
+        <div class="form-actions"><button type="reset" class="secondary">Clear</button><button class="primary">Submit Report</button></div>
+      </form>
+    </section>
+
+    <section id="items" class="view">
+      <div class="page-head"><p class="eyebrow">BROWSE</p><h2>Lost & Found Reports</h2><p>Search the campus reports and find a possible match.</p></div>
+      <div class="toolbar">
+        <input id="search" placeholder="🔍 Search by item, category or location...">
+        <select id="filter"><option value="All">All</option><option value="Lost">Lost</option><option value="Found">Found</option><option value="Returned">Returned</option></select>
+      </div>
+      <div id="allItems" class="grid"></div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-box">
+      <button class="close" id="closeModal">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
+>>>>>>> 3bb6ea9262e185e5848fbbb4c2146fdb82aca52e
